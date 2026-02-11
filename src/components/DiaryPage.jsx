@@ -32,7 +32,7 @@ export default function DiaryPage({ setCurrentPage }) {
           transition={{ duration: 1, delay: 0.5 }}
           className="text-center"
         >
-          <h1 className="text-3xl text-pink-300 mb-8 leading-relaxed">Happy Birthday....!<br /> My Love 🥳</h1>
+          <h1 className="text-3xl text-pink-300 mb-8 leading-relaxed">Happy Birthday....!<br /> Maahi...! 🥳</h1>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -53,7 +53,7 @@ export default function DiaryPage({ setCurrentPage }) {
             transition={{ duration: 0.8, delay: 1.5 }}
           >
             <p className="text-purple-200 text-lg mb-8 leading-relaxed">
-              No matter where life takes us, I am yours, today, tomorrow, and forever. You are my home, even when you’re far away....!💞
+              I’m really grateful that someone as beautiful as you came into my life. Your birthday is special for me too, because I get to celebrate you...!💞
             </p>
 
             <motion.button

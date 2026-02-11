@@ -3,7 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion"
 import { useState } from "react"
 
-const BALLOONS = ["🎈", "🎉", "🎊", "🎁"]
+const BALLOONS = ["🎈", "🎈", "🎈"]
 
 export default function Game({ setCurrentPage }) {
   const [balloons, setBalloons] = useState(
@@ -30,6 +30,7 @@ export default function Game({ setCurrentPage }) {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center px-4 text-center select-none">
       <h1 className="text-3xl md:text-4xl text-pink-300 mb-8">
+        Oye Motki....🤭<br />
         Pop all the balloons 🎈
       </h1>
 
@@ -61,8 +62,9 @@ export default function Game({ setCurrentPage }) {
       </div>
 
       <p className="mt-10 text-purple-200 text-sm md:text-base">
-        Pop every balloon to unlock something special 💖
+        Pop every balloon to unlock something special 💖<br />
       </p>
     </div>
   )
 }
+

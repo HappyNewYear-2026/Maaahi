@@ -64,7 +64,7 @@ export default function Birthday({ setCurrentPage }) {
         animate={{ opacity: 1 }}
         transition={{ delay: 2 }}
       >
-        Letter...💌
+        Next...✨
       </motion.button>
     </div>
   )

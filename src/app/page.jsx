@@ -4,6 +4,7 @@ import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import StarryBackground from "@/components/StarryBackground"
 import OpeningPage from "@/components/OpeningPage"
+import Game from "@/components/Game"
 import DiaryPage from "@/components/DiaryPage"
 import Birthday from "@/components/Birthday"
 import LetterPage from "@/components/LetterPage"
@@ -18,6 +19,7 @@ export default function Home() {
 
   const pages = {
     opening: OpeningPage,
+    game: Game,
     diary: DiaryPage,
     Birthday: Birthday,
     letter: LetterPage,

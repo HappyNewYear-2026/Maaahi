@@ -6,7 +6,7 @@ import StarryBackground from "@/components/StarryBackground"
 import OpeningPage from "@/components/OpeningPage"
 import Game from "@/components/Game"
 import DiaryPage from "@/components/DiaryPage"
-import Birthday from "@/components/Birthday"
+import ApologyPage from "@/components/ApologyPage"
 import LetterPage from "@/components/LetterPage"
 import HugPage from "@/components/HugPage"
 import GiftPage from "@/components/GiftPage"
@@ -17,15 +17,16 @@ export default function Home() {
   const [musicPlaying, setMusicPlaying] = useState(false)
   const [showMusicPlayer, setShowMusicPlayer] = useState(false)
 
-  const pages = {
-    opening: OpeningPage,
-    game: Game,
-    diary: DiaryPage,
-    Birthday: Birthday,
-    letter: LetterPage,
-    hug: HugPage,
-    gift: GiftPage,
-  }
+ const pages = {
+  opening: OpeningPage,
+  game: Game,
+  diary: DiaryPage,
+  Birthday: Birthday,
+  letter: LetterPage,
+  hug: HugPage,
+  gift: GiftPage,
+}
+
 
   const CurrentComponent = pages[currentPage]
 
@@ -44,7 +45,6 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gray-900 relative overflow-hidden">
       <StarryBackground />
-
 
       {/* Uncomment this if you want to add a background song */}
       {showMusicPlayer && <MusicPlayer musicPlaying={musicPlaying} setMusicPlaying={setMusicPlaying} />}

@@ -3,7 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion"
 import { useState } from "react"
 
-export default function GiftPage() {
+export default function GiftPage({ setMusicPlaying }) {
   const [giftOpened, setGiftOpened] = useState(false)
   const [showSurprise, setShowSurprise] = useState(false)
 
@@ -15,6 +15,9 @@ export default function GiftPage() {
   }
 
   const handleLoveClick = () => {
+    if (setMusicPlaying) {
+      setMusicPlaying(false)
+    }
     window.open(
       "https://happynewyear-2026.github.io/to_my_special.one/",
       "_blank"

@@ -3,7 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion"
 import { useState } from "react"
 
-export default function GiftPage({ setMusicPlaying }) {
+export default function GiftPage({ setMusicPlaying, setShowMusicPlayer }) {
   const [giftOpened, setGiftOpened] = useState(false)
   const [showSurprise, setShowSurprise] = useState(false)
 
@@ -15,9 +15,8 @@ export default function GiftPage({ setMusicPlaying }) {
   }
 
   const handleLoveClick = () => {
-    if (setMusicPlaying) {
-      setMusicPlaying(false)
-    }
+    setMusicPlaying?.(false)
+    setShowMusicPlayer?.(false)
     window.open(
       "https://my-madam-jii.github.io/Maahi_gallery/",
       "_blank"

@@ -7,24 +7,14 @@ export default function GiftPage() {
   const [giftOpened, setGiftOpened] = useState(false)
   const [showSurprise, setShowSurprise] = useState(false)
 
-  // 🎁 Gift open → start music
   const openGift = () => {
-    if (window.playBackgroundMusic) {
-      window.playBackgroundMusic()
-    }
-
     setGiftOpened(true)
     setTimeout(() => {
       setShowSurprise(true)
     }, 1200)
   }
 
-  // 💌 Click → stop music + open link
   const handleLoveClick = () => {
-    if (window.stopBackgroundMusic) {
-      window.stopBackgroundMusic()
-    }
-
     window.open(
       "https://happynewyear-2026.github.io/to_my_special.one/",
       "_blank"
@@ -92,7 +82,7 @@ export default function GiftPage() {
                     transition={{ duration: 1 }}
                     className="space-y-8 max-w-lg mx-auto"
                   >
-                    {/* 💌 LOVE BUTTON */}
+                    {/* 💌 UPDATED LOVE BUTTON */}
                     <motion.button
                       onClick={handleLoveClick}
                       animate={{

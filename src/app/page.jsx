@@ -6,7 +6,7 @@ import StarryBackground from "@/components/StarryBackground"
 import OpeningPage from "@/components/OpeningPage"
 import Game from "@/components/Game"
 import DiaryPage from "@/components/DiaryPage"
-import ApologyPage from "@/components/ApologyPage"
+import Birthday from "@/components/Birthday"
 import LetterPage from "@/components/LetterPage"
 import HugPage from "@/components/HugPage"
 import GiftPage from "@/components/GiftPage"
@@ -21,7 +21,7 @@ export default function Home() {
   opening: OpeningPage,
   game: Game,
   diary: DiaryPage,
-  Birthday: Birthday,
+  birthday: Birthday,
   letter: LetterPage,
   hug: HugPage,
   gift: GiftPage,

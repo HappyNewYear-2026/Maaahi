@@ -16,6 +16,7 @@ export default function Home() {
   const [currentPage, setCurrentPage] = useState("opening")
   const [musicPlaying, setMusicPlaying] = useState(false)
   const [showMusicPlayer, setShowMusicPlayer] = useState(false)
+  const [musicTrack, setMusicTrack] = useState("/audio/bg.mp3")
 
   const pages = {
     opening: OpeningPage,
@@ -47,7 +48,13 @@ export default function Home() {
 
 
       {/* Uncomment this if you want to add a background song */}
-      {showMusicPlayer && <MusicPlayer musicPlaying={musicPlaying} setMusicPlaying={setMusicPlaying} />}
+      {showMusicPlayer && (
+        <MusicPlayer
+          musicPlaying={musicPlaying}
+          setMusicPlaying={setMusicPlaying}
+          musicTrack={musicTrack}
+        />
+      )}
 
       <AnimatePresence mode="wait">
         <motion.div
@@ -63,6 +70,7 @@ export default function Home() {
             setCurrentPage={setCurrentPage}
             setMusicPlaying={setMusicPlaying}
             setShowMusicPlayer={setShowMusicPlayer}
+            setMusicTrack={setMusicTrack}
             musicPlaying={musicPlaying}
           />
         </motion.div>

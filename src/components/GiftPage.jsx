@@ -3,8 +3,6 @@
 import { motion, AnimatePresence } from "framer-motion"
 import { useState } from "react"
 
-const WHATSAPP_NUMBER = "919798863888" // 🔁 replace with your WhatsApp number
-
 export default function GiftPage() {
   const [giftOpened, setGiftOpened] = useState(false)
   const [showSurprise, setShowSurprise] = useState(false)
@@ -14,6 +12,13 @@ export default function GiftPage() {
     setTimeout(() => {
       setShowSurprise(true)
     }, 1200)
+  }
+
+  const handleLoveClick = () => {
+    window.open(
+      "https://happynewyear-2026.github.io/to_my_special.one/",
+      "_blank"
+    )
   }
 
   return (
@@ -77,14 +82,9 @@ export default function GiftPage() {
                     transition={{ duration: 1 }}
                     className="space-y-8 max-w-lg mx-auto"
                   >
-                    {/* 💌 TWINKLING WHATSAPP BUTTON */}
+                    {/* 💌 UPDATED LOVE BUTTON */}
                     <motion.button
-                      onClick={() =>
-                        window.open(
-                          `https://wa.me/${WHATSAPP_NUMBER}?text=💖%20I%20Love%20you%20II..! 💕🥹`,
-                          "_blank"
-                        )
-                      }
+                      onClick={handleLoveClick}
                       animate={{
                         scale: [1.2, 1.35, 1.2],
                         rotate: [0, 3, -3, 0],
@@ -106,33 +106,17 @@ export default function GiftPage() {
                       💌
                     </motion.button>
 
-                    {/* Text */}
-                    <motion.p
-                      initial={{ opacity: 0, y: 15 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.8, delay: 0.2 }}
-                      className="text-2xl text-pink-300"
-                    >
+                    <motion.p className="text-2xl text-pink-300">
                       Make a wish & cut it.🌹
                     </motion.p>
 
-                    <motion.p
-                      initial={{ opacity: 0, y: 15 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.8, delay: 0.4 }}
-                      className="text-lg text-purple-200"
-                    >
+                    <motion.p className="text-lg text-purple-200">
                       While you cut your birthday cake 🎂<br />
                       Imagine my hands over yours, guiding the knife, wishing silently that every slice of life ahead of you is filled with happiness, peace, and love.💕<br /><br />
                       I may not be there physically, but every candle you blow carries my prayers for you.😌
                     </motion.p>
 
-                    <motion.p
-                      initial={{ opacity: 0, y: 15 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.8, delay: 0.6 }}
-                      className="text-xl text-pink-200"
-                    >
+                    <motion.p className="text-xl text-pink-200">
                       Happy Birthday...🎈<br />
                       &<br />
                       I Love You...!💕

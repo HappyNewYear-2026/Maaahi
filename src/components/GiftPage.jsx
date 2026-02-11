@@ -15,18 +15,11 @@ export default function GiftPage() {
   }
 
   const handleLoveClick = () => {
-  // 🛑 Stop background music
-  if (window.stopBackgroundMusic) {
-    window.stopBackgroundMusic()
+    window.open(
+      "https://happynewyear-2026.github.io/to_my_special.one/",
+      "_blank"
+    )
   }
-
-  // 💌 Open your special link
-  window.open(
-    "https://happynewyear-2026.github.io/to_my_special.one/",
-    "_blank"
-     )
-  }
-
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center px-4 text-center relative overflow-hidden">

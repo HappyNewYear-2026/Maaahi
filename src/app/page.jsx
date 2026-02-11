@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import StarryBackground from "@/components/StarryBackground"
+import BackgroundAnimation from "@/components/BackgroundAnimation"
 import OpeningPage from "@/components/OpeningPage"
 import Game from "@/components/Game"
 import DiaryPage from "@/components/DiaryPage"

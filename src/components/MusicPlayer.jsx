@@ -4,7 +4,7 @@ import { useRef, useEffect } from "react"
 import { motion } from "framer-motion"
 import { Volume2, VolumeX } from "lucide-react"
 
-export default function MusicPlayer({ musicPlaying, setMusicPlaying }) {
+export default function MusicPlayer({ musicPlaying, setMusicPlaying, musicTrack }) {
   const audioRef = useRef(null)
 
   useEffect(() => {
@@ -16,7 +16,7 @@ export default function MusicPlayer({ musicPlaying, setMusicPlaying }) {
         audioRef.current.pause()
       }
     }
-  }, [musicPlaying])
+  }, [musicPlaying, musicTrack])
 
   const toggleMusic = () => {
     setMusicPlaying(!musicPlaying)
@@ -38,10 +38,7 @@ export default function MusicPlayer({ musicPlaying, setMusicPlaying }) {
         {musicPlaying ? <Volume2 size={20} /> : <VolumeX size={20} />}
       </motion.button>
 
-      {/* Change the audio source to original one */}
-      <audio ref={audioRef} loop preload="auto">
-        <source src="/audio/bg.mp3" type="audio/wav" />
-      </audio>
+      <audio ref={audioRef} loop preload="auto" src={musicTrack} />
     </motion.div>
   )
 }

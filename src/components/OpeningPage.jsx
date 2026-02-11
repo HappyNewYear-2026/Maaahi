@@ -7,7 +7,7 @@ export default function OpeningPage({ setCurrentPage, setMusicPlaying, setShowMu
     setMusicPlaying(true)
     setShowMusicPlayer(true)
     setTimeout(() => {
-      setCurrentPage("diary")
+      setCurrentPage("game")
     }, 500)
   }
 

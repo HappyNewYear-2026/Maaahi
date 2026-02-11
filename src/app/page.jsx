@@ -43,7 +43,8 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gray-900 relative overflow-hidden">
-      <StarryBackground />
+      <BackgroundAnimation />
+
 
       {/* Uncomment this if you want to add a background song */}
       {showMusicPlayer && <MusicPlayer musicPlaying={musicPlaying} setMusicPlaying={setMusicPlaying} />}

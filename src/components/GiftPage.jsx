@@ -19,7 +19,7 @@ export default function GiftPage({ setMusicPlaying }) {
       setMusicPlaying(false)
     }
     window.open(
-      "https://happynewyear-2026.github.io/to_my_special.one/",
+      "https://happynewyear-2026.github.io/Maahi_gallery/",
       "_blank"
     )
   }

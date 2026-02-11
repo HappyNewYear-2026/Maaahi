@@ -3,7 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion"
 import { useState } from "react"
 
-export default function GiftPage({ setMusicPlaying, setShowMusicPlayer }) {
+export default function GiftPage({ setMusicPlaying, setShowMusicPlayer, setMusicTrack }) {
   const [giftOpened, setGiftOpened] = useState(false)
   const [showSurprise, setShowSurprise] = useState(false)
 
@@ -15,8 +15,9 @@ export default function GiftPage({ setMusicPlaying, setShowMusicPlayer }) {
   }
 
   const handleLoveClick = () => {
-    setMusicPlaying?.(false)
-    setShowMusicPlayer?.(false)
+    setMusicTrack?.("/audio/y2mate.mp3")
+    setShowMusicPlayer?.(true)
+    setMusicPlaying?.(true)
     window.open(
       "https://my-madam-jii.github.io/Maahi_gallery/",
       "_blank"

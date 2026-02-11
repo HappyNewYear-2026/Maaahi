@@ -96,7 +96,7 @@ export default function HugPage({ setCurrentPage }) {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="text-2xl text-pink-200 leading-relaxed"
         >
-          _Close your eyes & Feel my love_
+          _Close your eyes & Feel the song_
         </motion.p>
         <motion.p
           initial={{ opacity: 0, y: 15 }}
@@ -105,8 +105,9 @@ export default function HugPage({ setCurrentPage }) {
           className="text-xl text-purple-200 leading-relaxed"
         >
            ✨I’m there.✨<br />
-           💖Holding you.💖<br />
-           💞Choosing you.💞<br />
+           💖For Holding cake.💖<br />
+           💞For eat cake.💞<br />& <br />
+           for make you laugh<br />
            💗Forever.💗
         </motion.p>
       </motion.div>
@@ -138,7 +139,7 @@ export default function HugPage({ setCurrentPage }) {
           }}
         />
         <Heart size={24} className="text-pink-200 relative z-10" />
-        <span className="relative z-10">.</span>
+        <span className="relative z-10"></span>
       </motion.button>
 
       <AnimatePresence>

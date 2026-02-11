@@ -84,9 +84,9 @@ export default function OpeningPage({ setCurrentPage, setMusicPlaying, setShowMu
           transition={{ duration: 0.8, delay: 1.3 }}
           className="text-pink-200 text-xl leading-relaxed"
         >
-          Sneha💕<br />
-          Distance can never weaken<br />
-          what I feel for you...!😉
+          Maahi 💕<br />
+          Take these flowers..🌹<br />
+          This flowers will never wither away..!😉
         </motion.p>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -94,7 +94,7 @@ export default function OpeningPage({ setCurrentPage, setMusicPlaying, setShowMu
           transition={{ duration: 0.8, delay: 1.6 }}
           className="text-purple-200 text-xl leading-relaxed"
         >
-          It only reminds me how real and strong our love is..!💞
+          These Flowers speak a language, my lips are too shy to speak...!💞
         </motion.p>
       </motion.div>
 

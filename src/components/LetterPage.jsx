@@ -21,7 +21,7 @@ export default function LetterPage({ setCurrentPage }) {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="text-2xl text-pink-300 mb-8 mt-10 md:mt-0"
         >
-          On your birthday,<br /> I wish I could gift you the one thing...!🎁
+          On your birthday,<br /> I truly pray for you that...!😌
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
@@ -129,7 +129,7 @@ export default function LetterPage({ setCurrentPage }) {
             transition={{ duration: 0.8, delay: 1.5 }}
             className="text-xl text-purple-200 leading-relaxed"
           >
-            If love could travel, mine would reach you before this message.😊
+            your birthday is filled with as much warm and lovely as the feeling i get, when I talk to you...🥰
           </motion.p>
 
           <motion.p
@@ -138,13 +138,12 @@ export default function LetterPage({ setCurrentPage }) {
             transition={{ duration: 0.8, delay: 1.8 }}
             className="text-lg text-pink-200 leading-relaxed max-w-lg mx-auto"
           >
-            let my words remind you that my heart beats only for you.<br />
-            No distance is bigger than my promise, no time stronger than my love.<br />
-            Wherever you are, whatever happens,<br />
-            I am yours… always.<br />
-            Forever & ever & ever & ever & ever...♾️<br />
-            Remember............!<br />
-            You are my Everything..!🌍
+            let make me more wishes for you..🤔.<br />
+            ....🤭<br />
+            🔸May God gives you lots of Ladyfingers....🙂<br />
+            🔸May God keep you away from cold drinks...🤫<br />
+            🔸May God bless you lots of Vitamin-D, So that your bones become strong as me.😁<br />
+            🔹May God always keeps such a lovely smile on your face...🤭
           </motion.p>
           <motion.p
             initial={{ opacity: 0, y: 10 }}
@@ -170,7 +169,7 @@ export default function LetterPage({ setCurrentPage }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 2.5, duration: 0.8 }}
         >
-          I need you...
+          Next..💌
         </motion.button>
       </motion.div>
     </div>

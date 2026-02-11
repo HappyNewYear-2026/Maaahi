@@ -6,7 +6,7 @@ import { useState, useEffect } from "react"
 export default function Birthday({ setCurrentPage }) {
   const [currentText, setCurrentText] = useState(0)
 
-  const texts = ["Distance may separate our bodies,", "but nothing can separate", "My soul from yours.🫵🏻"]
+  const texts = ["Jaldi cake kaat motki", "bhuk lgg gya hmko", "🕯️__🍽️.🎂.🍽️__🕯️"]
 
   useEffect(() => {
     const interval = setInterval(() => {

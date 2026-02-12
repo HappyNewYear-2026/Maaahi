@@ -2,8 +2,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #02040d;
-  --foreground: #f3f4f8;
+  --background: #ffffff;
+  --foreground: #171717;
 }
 
 @theme inline {
@@ -15,18 +15,16 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #02040d;
-    --foreground: #f3f4f8;
+    --background: #0a0a0a;
+    --foreground: #ededed;
   }
 }
 
 body {
-  background:
-    radial-gradient(circle at top, #121733 0%, #060a1b 45%, #02040d 100%);
+  background: var(--background);
   color: var(--foreground);
   font-family: "Kalam", cursive;
   user-select: none;
-  min-height: 100vh;
 }
 
 button{

@@ -119,14 +119,15 @@ export default function GiftPage({ setMusicPlaying, setShowMusicPlayer, setMusic
                       Maahii...📢<br />
                       & guiding the knife, wishing silently that every slice of life ahead of you is filled with happiness, peace, and love.💕<br /><br />
                       Even from miles away, I’m celebrating this moment with a full heart.😌<br />
-                      I wish I were there to steal the first bite, but until then...🫠
-                      One day I’ll be right there… today, my feelings reach you first.<br />
+                      I wish I could have been there to steal the first bite, but koi na...🥲
+                      One day I’ll be right there… today, today please let my feelings reach you..😊<br />
                     </motion.p>
 
                     <motion.p className="text-xl text-pink-200">
-                      I promise<br />
+                      I promise 🫱🏻‍🫲🏽<br /><br />
                       Once again...<br />
-                      Happy Birthday Maahi💕
+                      Happy Birthday Maahi 💕<br />
+                      ...ہمیشہ خوش رہیں
                     </motion.p>
                   </motion.div>
                 )}

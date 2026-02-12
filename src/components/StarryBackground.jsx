@@ -6,6 +6,7 @@ import { motion } from "framer-motion"
 const StarryBackground = memo(function StarryBackground() {
   const [stars, setStars] = useState([])
   const [hearts, setHearts] = useState([])
+  const [shootingStars, setShootingStars] = useState([])
 
   useEffect(() => {
     const starArray = [...Array(80)].map(() => ({
@@ -28,8 +29,29 @@ const StarryBackground = memo(function StarryBackground() {
     setHearts(heartArray)
   }, [])
 
+  useEffect(() => {
+    const shootingStarArray = [...Array(10)].map(() => ({
+      left: Math.random() * 120 - 20,
+      top: Math.random() * 55,
+      length: Math.random() * 120 + 80,
+      angle: Math.random() * 12 + 28,
+      duration: Math.random() * 1.2 + 1,
+      delay: Math.random() * 8,
+      repeatDelay: Math.random() * 6 + 5,
+    }))
+    setShootingStars(shootingStarArray)
+  }, [])
+
   return (
     <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(circle at 20% -10%, rgba(40, 46, 92, 0.32) 0%, rgba(3, 5, 18, 0.94) 60%, rgba(2, 3, 12, 1) 100%)",
+        }}
+      />
+
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -71,6 +93,39 @@ const StarryBackground = memo(function StarryBackground() {
           >
             {"\u2764"}
           </motion.div>
+        ))}
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.2 }}
+        className="absolute inset-0"
+      >
+        {shootingStars.map((shootingStar, i) => (
+          <motion.div
+            key={`shooting-star-${i}`}
+            className="absolute rounded-full"
+            style={{
+              left: `${shootingStar.left}%`,
+              top: `${shootingStar.top}%`,
+              width: `${shootingStar.length}px`,
+              height: "2px",
+              transform: `rotate(${shootingStar.angle}deg)`,
+              background:
+                "linear-gradient(90deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0) 100%)",
+              filter: "drop-shadow(0 0 8px rgba(255, 255, 255, 0.65))",
+            }}
+            initial={{ opacity: 0, x: 0, y: 0 }}
+            animate={{ opacity: [0, 1, 0], x: [0, 260], y: [0, 260] }}
+            transition={{
+              duration: shootingStar.duration,
+              ease: "easeOut",
+              repeat: Infinity,
+              delay: shootingStar.delay,
+              repeatDelay: shootingStar.repeatDelay,
+            }}
+          />
         ))}
       </motion.div>
     </div>

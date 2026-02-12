@@ -32,7 +32,7 @@ export default function GiftPage({ setMusicPlaying, setShowMusicPlayer, setMusic
         transition={{ duration: 1 }}
         className="text-3xl text-pink-300 mb-16"
       >
-        Ye khash tumhare ley... 💝
+        Ye khash aapke ley... 💝
       </motion.h2>
 
       <motion.div
@@ -115,14 +115,18 @@ export default function GiftPage({ setMusicPlaying, setShowMusicPlayer, setMusic
 
                     <motion.p className="text-lg text-purple-200">
                       While you cut your birthday cake 🎂<br />
-                      Imagine my hands over yours, guiding the knife, wishing silently that every slice of life ahead of you is filled with happiness, peace, and love.💕<br /><br />
-                      I may not be there physically, but every candle you blow carries my prayers for you.😌
+                      Imagine i'm with you to chear up..!<br />
+                      Maahii...📢<br />
+                      & guiding the knife, wishing silently that every slice of life ahead of you is filled with happiness, peace, and love.💕<br /><br />
+                      Even from miles away, I’m celebrating this moment with a full heart.😌<br />
+                      I wish I were there to steal the first bite, but until then...🫠
+                      One day I’ll be right there… today, my feelings reach you first.<br />
                     </motion.p>
 
                     <motion.p className="text-xl text-pink-200">
-                      Happy Birthday...🎈<br />
-                      &<br />
-                      I Love You...!💕
+                      I promise<br />
+                      Once again...<br />
+                      Happy Birthday Maahi💕
                     </motion.p>
                   </motion.div>
                 )}

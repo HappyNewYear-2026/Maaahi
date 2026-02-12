@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
+import StarryBackground from "@/components/StarryBackground"
 import OpeningPage from "@/components/OpeningPage"
 import Game from "@/components/Game"
 import DiaryPage from "@/components/DiaryPage"
@@ -42,7 +43,10 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen relative overflow-hidden">
+    <div className="min-h-screen bg-gray-900 relative overflow-hidden">
+      <StarryBackground />
+
+
       {/* Uncomment this if you want to add a background song */}
       {showMusicPlayer && (
         <MusicPlayer

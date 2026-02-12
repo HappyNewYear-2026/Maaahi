@@ -5,41 +5,42 @@ import { motion } from "framer-motion"
 
 const StarryBackground = memo(function StarryBackground() {
   const [stars, setStars] = useState([])
-  const [hearts, setHearts] = useState([])
   const [shootingStars, setShootingStars] = useState([])
 
   useEffect(() => {
-    const starArray = [...Array(80)].map(() => ({
+    const starArray = [...Array(140)].map((_, i) => ({
+      id: i,
       left: Math.random() * 100,
       top: Math.random() * 100,
-      duration: Math.random() * 4 + 3,
-      delay: Math.random() * 3,
+      size: Math.random() * 2.2 + 0.8,
+      duration: Math.random() * 3.5 + 2.2,
+      delay: Math.random() * 4,
+      glow: Math.random() * 10 + 6,
     }))
     setStars(starArray)
   }, [])
 
   useEffect(() => {
-    const heartArray = [...Array(20)].map(() => ({
-      left: Math.random() * 100,
-      top: Math.random() * 100,
-      fontSize: Math.random() * 10 + 10,
-      duration: Math.random() * 10 + 10,
-      delay: Math.random() * 5,
-    }))
-    setHearts(heartArray)
-  }, [])
+    let nextId = 0
 
-  useEffect(() => {
-    const shootingStarArray = [...Array(10)].map(() => ({
-      left: Math.random() * 120 - 20,
-      top: Math.random() * 55,
-      length: Math.random() * 120 + 80,
-      angle: Math.random() * 12 + 28,
-      duration: Math.random() * 1.2 + 1,
-      delay: Math.random() * 8,
-      repeatDelay: Math.random() * 6 + 5,
-    }))
-    setShootingStars(shootingStarArray)
+    const spawnShootingStar = () => {
+      const star = {
+        id: nextId++,
+        left: Math.random() * 90,
+        top: Math.random() * 45,
+        length: Math.random() * 130 + 120,
+        angle: Math.random() * 14 + 24,
+        duration: Math.random() * 0.7 + 0.9,
+        travel: Math.random() * 260 + 260,
+      }
+
+      setShootingStars((prev) => [...prev, star])
+    }
+
+    spawnShootingStar()
+    const interval = setInterval(spawnShootingStar, 1400)
+
+    return () => clearInterval(interval)
   }, [])
 
   return (
@@ -55,43 +56,26 @@ const StarryBackground = memo(function StarryBackground() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1 }}
+        transition={{ delay: 0.6 }}
         className="absolute inset-0"
       >
-        {stars.map((star, i) => (
+        {stars.map((star) => (
           <motion.div
-            key={`star-${i}`}
-            className="absolute h-0.5 w-0.5 rounded-full bg-white"
+            key={`star-${star.id}`}
+            className="absolute rounded-full bg-white"
             style={{ left: `${star.left}%`, top: `${star.top}%` }}
-            animate={{ opacity: [0.3, 0.8, 0.3], scale: [0.5, 1, 0.5] }}
+            animate={{ opacity: [0.25, 0.95, 0.25], scale: [0.85, 1.3, 0.85] }}
+            initial={{ opacity: 0 }}
             transition={{ duration: star.duration, repeat: Infinity, delay: star.delay }}
-          />
-        ))}
-      </motion.div>
-
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1 }}
-        className="absolute inset-0"
-      >
-        {hearts.map((heart, i) => (
-          <motion.div
-            key={`heart-${i}`}
-            className="absolute text-pink-300/50"
-            style={{
-              left: `${heart.left}%`,
-              top: `${heart.top}%`,
-              fontSize: `${heart.fontSize}px`,
-            }}
-            animate={{
-              y: [-20, -60],
-              opacity: [0.2, 0.4, 0.2],
-              rotate: [0, 180],
-            }}
-            transition={{ duration: heart.duration, repeat: Infinity, delay: heart.delay }}
           >
-            {"\u2764"}
+            <span
+              className="block rounded-full bg-white"
+              style={{
+                width: `${star.size}px`,
+                height: `${star.size}px`,
+                boxShadow: `0 0 ${star.glow}px rgba(255,255,255,0.85)`,
+              }}
+            />
           </motion.div>
         ))}
       </motion.div>
@@ -99,12 +83,12 @@ const StarryBackground = memo(function StarryBackground() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.2 }}
+        transition={{ delay: 0.9 }}
         className="absolute inset-0"
       >
-        {shootingStars.map((shootingStar, i) => (
+        {shootingStars.map((shootingStar) => (
           <motion.div
-            key={`shooting-star-${i}`}
+            key={`shooting-star-${shootingStar.id}`}
             className="absolute rounded-full"
             style={{
               left: `${shootingStar.left}%`,
@@ -112,18 +96,20 @@ const StarryBackground = memo(function StarryBackground() {
               width: `${shootingStar.length}px`,
               height: "2px",
               transform: `rotate(${shootingStar.angle}deg)`,
+              transformOrigin: "left center",
               background:
-                "linear-gradient(90deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0) 100%)",
-              filter: "drop-shadow(0 0 8px rgba(255, 255, 255, 0.65))",
+                "linear-gradient(90deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.4) 35%, rgba(255,255,255,0) 100%)",
+              filter: "drop-shadow(0 0 10px rgba(255, 255, 255, 0.85))",
             }}
             initial={{ opacity: 0, x: 0, y: 0 }}
-            animate={{ opacity: [0, 1, 0], x: [0, 260], y: [0, 260] }}
-            transition={{
-              duration: shootingStar.duration,
-              ease: "easeOut",
-              repeat: Infinity,
-              delay: shootingStar.delay,
-              repeatDelay: shootingStar.repeatDelay,
+            animate={{
+              opacity: [0, 1, 1, 0],
+              x: [0, shootingStar.travel],
+              y: [0, shootingStar.travel * 0.62],
+            }}
+            transition={{ duration: shootingStar.duration, ease: "easeOut" }}
+            onAnimationComplete={() => {
+              setShootingStars((prev) => prev.filter((item) => item.id !== shootingStar.id))
             }}
           />
         ))}

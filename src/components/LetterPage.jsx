@@ -139,9 +139,9 @@ export default function LetterPage({ setCurrentPage }) {
             className="text-lg text-pink-200 leading-relaxed max-w-lg mx-auto"
           >
             let make me more wishes for you..🤔.<br />
-            🤭<br />
+            <br />
             🔸May God gives you lots of Ladyfingers....🙂<br />
-            🔸May God keep you away from cold drinks.🤫<br />
+            🔸May God keep you away from cold drinks.<br />
             🔸May God bless you lots of Vitamin-D, So that your bones become strong as me.😁<br /><br />
             🔹May God always keeps such a lovely smile on your face...🤭
           </motion.p>
@@ -169,7 +169,7 @@ export default function LetterPage({ setCurrentPage }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 2.5, duration: 0.8 }}
         >
-          Next..💌
+          Next..✨
         </motion.button>
       </motion.div>
     </div>

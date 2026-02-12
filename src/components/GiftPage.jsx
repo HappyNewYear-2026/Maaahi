@@ -19,7 +19,7 @@ export default function GiftPage({ setMusicPlaying, setShowMusicPlayer, setMusic
     setShowMusicPlayer?.(true)
     setMusicPlaying?.(true)
     window.open(
-      "https://my-madam-jii.github.io/Maahi_gallery/",
+      "https://my-madam-jii.github.io/Play_maahi/",
       "_blank"
     )
   }
